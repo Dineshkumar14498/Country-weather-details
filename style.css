@@ -1,0 +1,12 @@
+.container{
+    color: white;
+    background-color: rgb(35, 64, 75) ;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.card{
+    border-radius: 10px !important;
+    background-image: linear-gradient(to right,rgb(221,202,163), rgb(67,85,84));
+    margin-bottom: 10px !important;
+}
