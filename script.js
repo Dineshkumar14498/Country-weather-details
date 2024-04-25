@@ -32,7 +32,7 @@ response
       <div class= "card-text text-center">Region:${result[i].region}</div>
       <div class= "card-text text-center">Capital:${result[i].capital}</div>
       <div class= "card-text text-center">Country Code:${result[i].cca3}</div>
-      <button class="btn btn-primary ">click for wheather </button>
+      <button class="btn btn-primary ">click for weather </button>
 
       </div>
       </div>
