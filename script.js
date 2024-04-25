@@ -26,11 +26,11 @@ response
       <h5 class="card-title text-center">${result[i].name.common} </h5>
       </div>
       <div class = "img-box">
-      <img src="${result[i].flags.png}"class="card-img-top" alt ="country image"/>
+      <img src="${result[i].flags.png}"class="card-img-top"  alt ="country image"/>
       </div>
       <div class= "card-body">
-      <div class= "card-text text-center">Captial:${result[i].captial}</div>
       <div class= "card-text text-center">Region:${result[i].region}</div>
+      <div class= "card-text text-center">Capital:${result[i].capital}</div>
       <div class= "card-text text-center">Country Code:${result[i].cca3}</div>
       <button class="btn btn-primary ">click for wheather </button>
 

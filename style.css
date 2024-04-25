@@ -19,10 +19,28 @@
     object-fit: scale-down;
 
 }
-.img-box img{
+
+
+.card-body{
+    padding-bottom: 50px !important;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    align-items: center;
+
+
+
+}
+
+.img -box img{
     border-radius: 10px !important;
-    width: 90%;
+    width: 60%;
     align-self: center;
     height: 100%;
-    
 }
+
+
+.col-sm-6{
+    margin-top: 1em !important;
+}
+
