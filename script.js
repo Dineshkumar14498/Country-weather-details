@@ -13,12 +13,14 @@ document.body.append(h1, container);
 container.append(row);
 
 const response = fetch("https://restcountries.com/v3.1/all");
-response.then((data) => data.json()) .then((result) => {
+response
+  .then((data) => data.json())
+  .then((result) => {
     //console.log(result);
     for (let i = 0; i < result.length; i++) {
-      const col = document.createElement('div')
-      col.classList="col-sm-6 col-md-4 col-lg-4 col-xl-4"
-      col.innerHTML=`
+      const col = document.createElement("div");
+      col.classList = "col-sm-6 col-md-4 col-lg-4 col-xl-4";
+      col.innerHTML = `
       <div class ="card h-100">
       <div class ="card-header">
       <h5 class="card-title text-center">${result[i].name.common} </h5>
@@ -35,28 +37,25 @@ response.then((data) => data.json()) .then((result) => {
       </div>
       </div>
 
-      `
-        row.append(col);
+      `;
+      row.append(col);
     }
-let buttons = document.querySelectorAll("button");
-buttons.forEach((btn,index)=>{
-    btn.addEventListener("click",()=>{
-        let latlng =result[index].latlng
-        let lat=latlng[0]
-        let lon=latlng[1]
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        let latlng = result[index].latlng;
+        let lat = latlng[0];
+        let lon = latlng[1];
         //console.log(lat);
-       // console.log(long);
-       let weatherapi=fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=8a9578217b92670d05e7cf46b88fdbeb`)
-       weatherapi.then((data1)=>data1.json())
-       .then((res)=>{
-        alert(`wheather of ${result[index].name.common} is {math.floor}`)
-       }
-    )
-    })
-
-})
-
-
-
-
+        // console.log(long);
+        let weatherapi = fetch(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=8a9578217b92670d05e7cf46b88fdbeb`
+        );
+        weatherapi
+          .then((data1) => data1.json())
+          .then((res) => {
+            alert(`wheather of ${result[index].name.common} is ${Math.floor(res.main.temp)}🌡C☁`);
+          });
+      });
+    });
   });

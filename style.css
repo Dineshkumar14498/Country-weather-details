@@ -10,3 +10,19 @@
     background-image: linear-gradient(to right,rgb(221,202,163), rgb(67,85,84));
     margin-bottom: 10px !important;
 }
+
+.Card.image{
+    display:flex;
+    justify-content: center;
+    height: 8em;
+    margin: 30px auto 0 auto !important;
+    object-fit: scale-down;
+
+}
+.img-box img{
+    border-radius: 10px !important;
+    width: 90%;
+    align-self: center;
+    height: 100%;
+    
+}
