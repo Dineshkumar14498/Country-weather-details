@@ -25,7 +25,7 @@ response
       <div class ="card-header">
       <h5 class="card-title text-center">${result[i].name.common} </h5>
       </div>
-      <div class = "img-box">
+      <div class = "img-box text-center ">
       <img src="${result[i].flags.png}"class="card-img-top"  alt ="country image"/>
       </div>
       <div class= "card-body">
@@ -54,7 +54,11 @@ response
         weatherapi
           .then((data1) => data1.json())
           .then((res) => {
-            alert(`wheather of ${result[index].name.common} is ${Math.floor(res.main.temp)}🌡C☁`);
+            alert(
+              `wheather of ${result[index].name.common} is ${Math.floor(
+                res.main.temp
+              )} and ${Math.ceil(res.main.feels_like)}🌡C☁`
+            );
           });
       });
     });

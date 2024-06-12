@@ -23,7 +23,7 @@
 
 .card-body{
     padding-bottom: 50px !important;
-    display: flex;
+    display:flex;
     flex-direction: column;
     line-height: 40px;
     align-items: center;
@@ -34,9 +34,10 @@
 
 .img -box img{
     border-radius: 10px !important;
-    width: 60%;
+    width: 100%!important;
     align-self: center;
     height: 100%;
+    
 }
 
 
@@ -44,3 +45,9 @@
     margin-top: 1em !important;
 }
 
+.card-img-top{
+    align-items: center !important;
+    width: 350px;
+    height: 200px;
+    
+}
